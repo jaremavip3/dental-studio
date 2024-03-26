@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className="w-full text-center py-12 md:py-24 lg:py-32 border-t flex justify-center">
-      <div className="container grid items-center justify-center  gap-4 px-4  md:px-6 ">
+    <section className="w-full m-0 flex justify-center text-center py-12 md:py-24 lg:py-32 border-t  ">
+      <div className="container w-full grid items-center justify-center  gap-4 px-4  md:px-6 ">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
             Our Services
@@ -14,7 +14,7 @@ export default function Services() {
             and beautiful.
           </p>
         </div>
-        <div className=" mx-auto grid max-w-5xl items-start gap-6 sm:grid-cols-2 md:gap-12 lg:max-w-6xl lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl items-start gap-6 sm:grid-cols-2 md:gap-12 lg:max-w-6xl lg:grid-cols-3">
           <div className="flex flex-col items-center space-y-2">
             <Image
               alt="Service"

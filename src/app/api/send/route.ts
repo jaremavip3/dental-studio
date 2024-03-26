@@ -1,22 +1,25 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-//import { AirbnbReviewEmail } from "../../../components/email";
 import { EmailTemplate } from "../../../components/email";
 
-//AirbnbReviewEmail to put back in the code
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: any) {
+export async function POST(request: any) {
   try {
-    const { name, email, message } = JSON.parse(req.body);
+    const body = await request.json();
+    console.log("body", body);
+    const { name, email, message } = body;
 
-    const { data } = await resend.emails.send({
-      from: `${process.env.FROM_EMAIL}`,
-      to: `${process.env.TO_EMAIL}`,
-      subject: "🎉New submission from your website!",
+    const data = await resend.emails.send({
+      from: "Dental Studio Website <onboarding@resend.dev>",
+      to: [`${process.env.EMAIL_TO}`], //`${process.env.EMAIL_TO}`
+      subject: "🎉New submission from client!",
       react: EmailTemplate({ name, email, message }),
     });
-    return Response.json(data);
+
+    return Response.json({
+      status: 200,
+    });
   } catch (error) {
     return Response.json({ error });
   }

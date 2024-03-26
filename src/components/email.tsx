@@ -1,219 +1,160 @@
-// import {
-//   Body,
-//   Button,
-//   Container,
-//   Head,
-//   Hr,
-//   Html,
-//   Img,
-//   Link,
-//   Preview,
-//   Row,
-//   Section,
-//   Text,
-// } from "@react-email/components";
-// import * as React from "react";
+import {
+  Body,
+  Button,
+  Container,
+  Head,
+  Hr,
+  Html,
+  Img,
+  Link,
+  Preview,
+  Row,
+  Section,
+  Text,
+} from "@react-email/components";
+import * as React from "react";
+import emailLogo from "../../public/email-teeth-logo.png";
 
-// interface AirbnbReviewEmailProps {
-//   authorName?: string;
-//   authorImage?: string;
-//   reviewText?: string;
-// }
+interface EmailTemplateProps {
+  name?: string;
+  email?: string;
+  message?: string;
+}
 
-// const baseUrl = "https://demo.react.email";
+const baseUrl = "http://localhost:3000/";
 
-// export const AirbnbReviewEmail = ({
-//   authorName,
-//   authorImage,
-//   reviewText,
-// }: AirbnbReviewEmailProps) => {
-//   const previewText = `Read ${authorName}'s review`;
+export const EmailTemplate = ({ name, email, message }: EmailTemplateProps) => {
+  const previewText = `Read ${name}'s review`;
 
-//   return (
-//     <Html>
-//       <Head />
-//       <Preview>{previewText}</Preview>
+  return (
+    <Html>
+      <Head />
+      <Preview>{previewText}</Preview>
 
-//       <Body style={main}>
-//         <Container style={container}>
-//           <Section>
-//             <Img
-//               src={`${baseUrl}/static/airbnb-logo.png`}
-//               width="96"
-//               height="30"
-//               alt="Airbnb"
-//             />
-//           </Section>
-//           <Section>
-//             <Img
-//               src={authorImage}
-//               width="96"
-//               height="96"
-//               alt={authorName}
-//               style={userImage}
-//             />
-//           </Section>
-//           <Section style={{ paddingBottom: "20px" }}>
-//             <Row>
-//               <Text style={heading}>Here&apos;s what {authorName} wrote</Text>
-//               <Text style={review}>{reviewText}</Text>
-//               <Text style={paragraph}>
-//                 Now that the review period is over, we’ve posted {authorName}
-//                 ’s review to your Airbnb profile.
-//               </Text>
-//               <Text style={{ ...paragraph, paddingBottom: "16px" }}>
-//                 While it’s too late to write a review of your own, you can send
-//                 your feedback to {authorName} using your Airbnb message thread.
-//               </Text>
+      <Body style={main}>
+        <Container style={container}>
+          <Section>
+            <Text style={namebutton}>👩‍⚕️ Diana Zarowsky Dental Studio 🪥</Text>
+          </Section>
 
-//               <Button style={button} href="https://airbnb.com/">
-//                 Send My Feedback
-//               </Button>
-//             </Row>
-//           </Section>
+          <Section style={{ paddingBottom: "20px" }}>
+            <Row>
+              <Text style={heading}>Here&apos;s what {name} wrote: </Text>
+              <Text style={review}>{message}</Text>
 
-//           <Hr style={hr} />
+              <Text style={{ ...paragraph, paddingBottom: "16px" }}>
+                If you want to response to {name} click on the button below 👇
+              </Text>
 
-//           <Section>
-//             <Row>
-//               <Text style={{ ...paragraph, fontWeight: "700" }}>
-//                 Common questions
-//               </Text>
-//               <Text>
-//                 <Link href="https://airbnb.com/help/article/13" style={link}>
-//                   How do reviews work?
-//                 </Link>
-//               </Text>
-//               <Text>
-//                 <Link href="https://airbnb.com/help/article/1257" style={link}>
-//                   How do star ratings work?
-//                 </Link>
-//               </Text>
-//               <Text>
-//                 <Link href="https://airbnb.com/help/article/995" style={link}>
-//                   Can I leave a review after 14 days?
-//                 </Link>
-//               </Text>
-//               <Hr style={hr} />
-//               <Text style={footer}>
-//                 Airbnb, Inc., 888 Brannan St, San Francisco, CA 94103
-//               </Text>
-//               <Link href="https://airbnb.com" style={reportLink}>
-//                 Report unsafe behavior
-//               </Link>
-//             </Row>
-//           </Section>
-//         </Container>
-//       </Body>
-//     </Html>
-//   );
-// };
+              <Button style={button} href={`mailto:${email}`}>
+                Response to clients email
+              </Button>
+            </Row>
+          </Section>
 
-// AirbnbReviewEmail.PreviewProps = {
-//   authorName: "Alex",
-//   authorImage: `${baseUrl}/static/airbnb-review-user.jpg`,
-//   reviewText: `“Alan was a great guest! Easy communication, the apartment was left
-//       in great condition, very polite, and respectful of all house rules.
-//       He’s welcome back anytime and would easily recommend him to any
-//       host!”`,
-// } as AirbnbReviewEmailProps;
+          <Hr style={hr} />
 
-// export default AirbnbReviewEmail;
+          <Section>
+            <Row>
+              <Text style={{ ...paragraph, fontWeight: "700" }}>
+                Have a nice day!
+              </Text>
 
-// const main = {
-//   backgroundColor: "#ffffff",
-//   fontFamily:
-//     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-// };
+              <Hr style={hr} />
+              <Text style={footer}>
+                Dental Studio, 585 Anette Srteet, Unit B, Toronto, Ontarion, M6S
+                2C3
+              </Text>
+              <Link href="https://airbnb.com" style={reportLink}>
+                Report unsafe behavior
+              </Link>
+            </Row>
+          </Section>
+        </Container>
+      </Body>
+    </Html>
+  );
+};
 
-// const container = {
-//   margin: "0 auto",
-//   padding: "20px 0 48px",
-//   width: "580px",
-//   maxWidth: "100%",
-// };
+EmailTemplate.PreviewProps = {
+  authorName: "Alex",
+  authorImage: `${baseUrl}/static/airbnb-review-user.jpg`,
+  reviewText: `“Alan was a great guest! Easy communication, the apartment was left
+		in great condition, very polite, and respectful of all house rules.
+		He’s welcome back anytime and would easily recommend him to any
+		host!”`,
+};
 
-// const userImage = {
-//   margin: "0 auto",
-//   marginBottom: "16px",
-//   borderRadius: "50%",
-// };
+export default EmailTemplate;
 
-// const heading = {
-//   fontSize: "32px",
-//   lineHeight: "1.3",
-//   fontWeight: "700",
-//   color: "#484848",
-// };
+const main = {
+  backgroundColor: "#EEEEEE",
+  fontFamily:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
+};
 
-// const paragraph = {
-//   fontSize: "18px",
-//   lineHeight: "1.4",
-//   color: "#484848",
-// };
+const container = {
+  margin: "0 auto",
+  padding: "20px 0 48px",
+  width: "580px",
+  maxWidth: "100%",
+};
 
-// const review = {
-//   ...paragraph,
-//   padding: "24px",
-//   backgroundColor: "#f2f3f3",
-//   borderRadius: "4px",
-// };
+const heading = {
+  fontSize: "32px",
+  lineHeight: "1.3",
+  fontWeight: "700",
+  color: "#222831",
+  textAlign: "center" as const,
+};
 
-// const button = {
-//   backgroundColor: "#ff5a5f",
-//   borderRadius: "3px",
-//   color: "#fff",
-//   fontSize: "18px",
-//   paddingTop: "19px",
-//   paddingBottom: "19px",
-//   textDecoration: "none",
-//   textAlign: "center" as const,
-//   display: "block",
-//   width: "100%",
-// };
+const paragraph = {
+  fontSize: "18px",
+  lineHeight: "1.4",
+  color: "#222831",
+};
 
-// const link = {
-//   ...paragraph,
-//   color: "#ff5a5f",
-//   display: "block",
-// };
+const review = {
+  ...paragraph,
+  padding: "24px",
+  backgroundColor: "#f2f3f3",
+  borderRadius: "4px",
+};
 
-// const reportLink = {
-//   fontSize: "14px",
-//   color: "#9ca299",
-//   textDecoration: "underline",
-// };
+const button = {
+  backgroundColor: "#00ADB5",
+  borderRadius: "10px",
+  color: "#fff",
+  fontSize: "18px",
+  paddingTop: "19px",
+  paddingBottom: "19px",
+  textDecoration: "none",
+  textAlign: "center" as const,
+  display: "block",
+  width: "100%",
+};
 
-// const hr = {
-//   borderColor: "#cccccc",
-//   margin: "20px 0",
-// };
+const namebutton = {
+  fontSize: "32px",
+  lineHeight: "1.3",
+  fontWeight: "700",
+  color: "#222831",
+  textAlign: "center" as const,
+};
 
-// const footer = {
-//   color: "#9ca299",
-//   fontSize: "14px",
-//   marginBottom: "10px",
-// };
-export const EmailTemplate = ({
-  name,
-  email,
-  message,
-}: {
-  name: string;
-  email: string;
-  message: string;
-}) => (
-  <div>
-    <p>Hello,</p>
-    <p>
-      {name} has submitted the contact form on your website. Their email is{" "}
-      {email}!
-    </p>
-    <p>This is the message: {message} </p>
-    <p>
-      Regards,
-      <br />
-      Website
-    </p>
-  </div>
-);
+const reportLink = {
+  fontSize: "14px",
+  color: "#9ca299",
+  textDecoration: "underline",
+};
+
+const hr = {
+  borderColor: "#222831",
+  margin: "20px 0",
+};
+
+const footer = {
+  color: "#9ca299",
+  fontSize: "14px",
+  marginBottom: "10px",
+};

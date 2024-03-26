@@ -1,6 +1,7 @@
 "use client";
 import Label from "next";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -18,35 +19,42 @@ export default function Contact() {
       alert("Please fill all the fields");
       return false;
     }
-    await fetch("/api/send", {
+
+    const response = await fetch("/api/send", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ name, email, message }), // data can be `string` or {object}!
     })
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);
-        if (data && data.id) {
-          alert(
+
+        if (data.status === 200) {
+          toast.success(
             `Thank you for your message ${name}! We will get back to you soon!`
           );
           setName("");
           setEmail("");
           setMessage("");
         } else {
-          alert("Apologies! Please try again.");
+          console.log("Data: " + data);
+          console.log("data id:" + data.id);
+          toast.error("Apologies! Please try again.");
         }
 
         // Add your logic here to send the email
       })
       .catch((error) => {
         setLoading(false);
-        alert("Ooops! unfortunately some error has occurred.");
+        toast.error("Ooops! unfortunately some error has occurred.");
       });
     return true;
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 text-center md:px-6">
+    <section className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-100 text-center md:px-6">
       <div className="container grid items-center justify-center gap-4 px-4 ">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -97,7 +105,7 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="flex justify-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500"
+              className="flex justify-center rounded-md bg-cyan-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-600"
             >
               {loading ? (
                 <div

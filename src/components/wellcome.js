@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Wellcome() {
   return (
     <section
-      className="w-full flex justify-center items- py-12 md:py-24 lg:py-32 xl:py-48"
-      id="services"
+      className="w-full flex justify-center items- py-12 md:py-24 lg:py-32 xl:py-48 lg:mt-[68px] md:mt-[104px] mt-[104px]"
+      id="wellcome"
     >
       <div className="container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
         <div className="text-center space-y-2">
@@ -22,6 +22,7 @@ export default function Wellcome() {
           height={300}
           src="/hero-image.png" // correct path to the image file
           width={700}
+          priority={true}
         />
       </div>
     </section>

@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body className={inter.className}>
         <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
         {children}

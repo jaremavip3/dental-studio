@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <section className="w-full m-0 text-center py-12 border-t flex justify-center md:py-24 lg:py-32">
-      <div className="container  grid items-center justify-center gap-4  md:px-6">
+    <section id="team" className="w-full py-12 md:py-24 lg:py-32">
+      <div className=" grid mx-4 items-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Meet Our Team

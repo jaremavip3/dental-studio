@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Head from "@/components/Head";
+import Head from "@/components/head";
 import Navbar from "@/components/navbar";
-import Wellcome from "@/components/Wellcome";
+import Wellcome from "@/components/wellcome";
 import Services from "@/components/services";
-import Team from "@/components/Team";
+import Team from "@/components/team";
 import Contact from "@/components/contact";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (

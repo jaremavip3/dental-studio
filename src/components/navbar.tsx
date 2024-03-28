@@ -1,38 +1,37 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-// import useScrollDirection from "../../utils/showNavbar";
-{
-  /* <nav
-      className={
-        shouldShowNavbar
-          ? "bg-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 "
-          : "bg-white border-gray-200 dark:bg-gray-900 "
-      }
-    ></nav> */
-}
+
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  // const shouldShowNavbar = useScrollDirection();
-  let prevScrollpos = 0;
-  if (typeof window !== "undefined") prevScrollpos = window.scrollY;
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-  window.onscroll = function () {
-    var currentScrollPos = window.scrollY;
-    var navbar = document.getElementById("navbar");
-    if (navbar !== null) {
-      if (prevScrollpos > currentScrollPos || currentScrollPos < 50) {
-        navbar.style.top = "0";
-      } else {
-        if (window.innerWidth < 493) {
-          navbar.style.top = "-104px";
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const navbar = document.getElementById("navbar");
+      if (navbar !== null) {
+        if (prevScrollPos > currentScrollPos || currentScrollPos < 50) {
+          navbar.style.top = "0";
         } else {
-          navbar.style.top = "-68px";
+          if (window.innerWidth < 493) {
+            navbar.style.top = "-104px";
+          } else {
+            navbar.style.top = "-68px";
+          }
         }
       }
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    // Only execute on the client side
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     }
-    prevScrollpos = currentScrollPos;
-  };
+  }, [prevScrollPos]);
+
   return (
     <nav
       id="navbar"

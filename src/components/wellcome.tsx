@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Wellcome() {
   return (
     <section
-      className="w-full flex justify-center items- py-12 md:py-24 lg:py-32 xl:py-48 lg:mt-[68px] md:mt-[104px] mt-[104px]"
+      className="w-full flex justify-center items- py-6 md:py-12 lg:py-24 xl:py-32 lg:mt-[72px] max-[403px]:mt-[112px] mt-[72px]"
       id="wellcome"
     >
       <div className="container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">

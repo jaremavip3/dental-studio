@@ -3,10 +3,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className="w-full m-0 flex justify-center text-center py-12 md:py-24 lg:py-32 border-t  "
-    >
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32">
       <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-3">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
@@ -17,14 +14,14 @@ export default function Services() {
             and beautiful.
           </p>
         </div>
-        <div className="mx-auto grid max-w-5xl items-start gap-6 sm:grid-cols-2 md:gap-12 lg:max-w-6xl lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl items-start gap-6 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-3 ">
           <div className="flex flex-col items-center space-y-2">
             <Image
               alt="Service"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="200"
+              height="250"
               src="/general-dentistry.jpg"
-              width="300"
+              width="375"
             />
             <div className="space-y-2">
               <h3 className="text-xl font-bold">General Dentistry</h3>
@@ -39,9 +36,9 @@ export default function Services() {
             <Image
               alt="Service"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="200"
+              height="250"
               src="/general-dentistry.jpg"
-              width="300"
+              width="375"
             />
             <div className="space-y-2 ">
               <h3 className="text-xl font-bold ">Cosmetic Dentistry</h3>
@@ -56,9 +53,9 @@ export default function Services() {
             <Image
               alt="Service"
               className="aspect-[4/3] overflow-hidden rounded-lg object-cover object-center"
-              height="200"
+              height="250"
               src="/general-dentistry.jpg"
-              width="300"
+              width="375"
             />
             <div className="space-y-2 ">
               <h3 className="text-xl font-bold ">Orthodontics</h3>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -14,10 +15,10 @@ export default function Navbar() {
         if (prevScrollPos > currentScrollPos || currentScrollPos < 50) {
           navbar.style.top = "0";
         } else {
-          if (window.innerWidth < 493) {
-            navbar.style.top = "-104px";
+          if (window.innerWidth < 403) {
+            navbar.style.top = "-112px";
           } else {
-            navbar.style.top = "-68px";
+            navbar.style.top = "-72px";
           }
         }
       }
@@ -38,18 +39,18 @@ export default function Navbar() {
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-          href="https://flowbite.com/"
+          href="https://dz-dental-studio.vercel.app/#wellcome"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          {/*
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
+          <Image
+            src="/dental-svgrepo-com.png"
+            width="40"
+            height="40"
+            alt="Teeth icon"
           />
-  */}
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Diana Zarowsky Clinic
+
+          <span className="self-center text-2xl font-semibold  dark:text-white">
+            DZ Studio
           </span>
         </a>
         <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">

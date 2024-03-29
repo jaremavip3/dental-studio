@@ -7,6 +7,7 @@ import Team from "@/components/team";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Map from "@/components/map";
+import PreFooter from "@/components/prefooter";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <Contact />
           <Map />
         </main>
+        <PreFooter />
         <Footer />
       </div>
     </>

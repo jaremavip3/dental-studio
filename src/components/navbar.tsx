@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -22,14 +21,14 @@ export default function Navbar() {
           }
         }
       }
+
       setPrevScrollPos(currentScrollPos);
     };
 
     // Only execute on the client side
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
+    if (typeof window === "undefined") return;
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   return (

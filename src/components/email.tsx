@@ -47,7 +47,7 @@ export const EmailTemplate = ({ name, email, message }: EmailTemplateProps) => {
               </Text>
 
               <Button style={button} href={`mailto:${email}`}>
-                Response to clients email
+                Reply to clients email
               </Button>
             </Row>
           </Section>
@@ -65,7 +65,10 @@ export const EmailTemplate = ({ name, email, message }: EmailTemplateProps) => {
                 Dental Studio, 585 Anette Srteet, Unit B, Toronto, Ontarion, M6S
                 2C3
               </Text>
-              <Link href="https://airbnb.com" style={reportLink}>
+              <Link
+                href="https://support.google.com/mail/answer/8151?sjid=5223956102672362552-NC"
+                style={reportLink}
+              >
                 Report unsafe behavior
               </Link>
             </Row>

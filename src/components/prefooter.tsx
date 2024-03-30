@@ -124,9 +124,31 @@ export default function PreFooter() {
       </svg>
     );
   }
+  function WorkingHourIcon(props: any) {
+    return (
+      <svg
+        {...props}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        strokeWidth="0"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path
+          d="M12 7V12L9.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+          stroke="#000000"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        ></path>
+      </svg>
+    );
+  }
+
   return (
     <section className="w-full text-slate-900 p-8 bg-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
         <div>
           <h2 className="font-bold text-lg mb-4">Adress</h2>
           <MapPinIcon className="text-slate-900 w-6 h-6 mb-2" />
@@ -140,16 +162,18 @@ export default function PreFooter() {
         <div>
           <h2 className="font-bold text-lg mb-4">Email</h2>
           <MailboxIcon className="text-slate-900 w-6 h-6 mb-2" />
-          <p>yarema.petrushchak24@gmail.com</p>
+          <p>info@dzdental.ca</p>
         </div>
         <div>
           <h2 className="font-bold text-lg mb-4">Working hours</h2>
+          <WorkingHourIcon className="text-slate-900 w-6 h-6 mb-2" />
           <p>Tuesday-Friday 9:00-18:00</p>
           <p>Saturday 9:00-13:00</p>
           <p>Sunday-Monday closed</p>
         </div>
-        <div className="lg:col-span-4">
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mt-8 border-t-2 border-slate-950 pt-4">
+
+        <div className="lg:col-span-4 md:col-span-2">
+          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mt-8 border-t-4 border-slate-950 pt-4 ">
             <div>
               <h2 className="font-bold text-lg mb-4">Social Networks</h2>
               <p>Foolow us in social networks</p>

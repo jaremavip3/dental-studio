@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import LocalSwitcher from "@/components/ui/local-switcher";
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -38,6 +39,7 @@ export default function Navbar() {
       className="bg-white border-gray-200  fixed w-full top-0 duration-200"
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <LocalSwitcher />
         <a
           href="https://dz-dental-studio.vercel.app/#wellcome"
           className="flex items-center space-x-3 rtl:space-x-reverse"

@@ -1,10 +1,11 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useTransition } from "react";
 
 export default function LocalSwitcher() {
+  const t = useTranslations("Navbar");
   const [isPending, startTransition] = useTransition();
   const router = useRouter(); // get the router object from the next/navigation module
   const activeLocale = useLocale(); // get the active locale from the next-intl module
@@ -19,16 +20,33 @@ export default function LocalSwitcher() {
 
   return (
     <>
-      <div className="border-2 rounded ">
-        <p className="sr-only">Change language</p>
+      <div className=" max-w-sm ">
+        <p className="sr-only">{t("navbar_language")}</p>
+        {/* <label
+          htmlFor="language"
+          className="hidden  md:block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >
+          Select a language
+        </label> */}
         <select
+          id="language"
           defaultValue={activeLocale}
           disabled={isPending}
-          className="bg-transparent py-2"
+          className="appearance-none   bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
           onChange={handleLangugeSwitch}
         >
-          <option value="en">English 🇬🇧</option>
-          <option value="ua">Ukrainian 🇺🇦</option>
+          <option
+            className="appearance-none inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100 "
+            value="en"
+          >
+            {t("navbar_language_en")}
+          </option>
+          <option
+            className="appearance-none inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100 "
+            value="ua"
+          >
+            {t("navbar_language_ua")}
+          </option>
         </select>
       </div>
     </>

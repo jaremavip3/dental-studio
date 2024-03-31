@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function PreFooter() {
+  const t = useTranslations("Prefooter");
   function FacebookIcon(props: any) {
     return (
       <svg
@@ -150,35 +152,39 @@ export default function PreFooter() {
     <section className="w-full text-slate-900 p-8 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
         <div>
-          <h2 className="font-bold text-lg mb-4">Adress</h2>
+          <h2 className="font-bold text-lg mb-4">{t("prefooter_adress")}</h2>
           <MapPinIcon className="text-slate-900 w-6 h-6 mb-2" />
-          <p>585 Annette Street</p>
+          <p>{t("prefooter_adress_text")}</p>
         </div>
         <div>
-          <h2 className="font-bold text-lg mb-4">Phone number</h2>
+          <h2 className="font-bold text-lg mb-4">{t("prefooter_phone")}</h2>
           <PhoneIcon className="text-slate-900 w-6 h-6 mb-2" />
           <p>416-998-4853</p>
         </div>
         <div>
-          <h2 className="font-bold text-lg mb-4">Email</h2>
+          <h2 className="font-bold text-lg mb-4">{t("prefooter_email")}</h2>
           <MailboxIcon className="text-slate-900 w-6 h-6 mb-2" />
           <p>info@dzdental.ca</p>
         </div>
         <div>
-          <h2 className="font-bold text-lg mb-4">Working hours</h2>
+          <h2 className="font-bold text-lg mb-4">
+            {t("prefooter_working_hours")}
+          </h2>
           <WorkingHourIcon className="text-slate-900 w-6 h-6 mb-2" />
-          <p>Tuesday-Friday 9:00-18:00</p>
-          <p>Saturday 9:00-13:00</p>
-          <p>Sunday-Monday closed</p>
+          <p>{t("prefooter_working_hours_during_week_days")}</p>
+          <p>{t("prefooter_working_hours_saturday_day")}</p>
+          <p>{t("prefooter_working_hours_sunday_day")}</p>
         </div>
 
         <div className="lg:col-span-4 md:col-span-2">
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mt-8 border-t-4 border-slate-950 pt-4 ">
+          <div className="flex gap-4 flex-col lg:flex-row justify-between items-center lg:items-start mt-8 border-t-4 border-slate-950 pt-4 ">
             <div>
-              <h2 className="font-bold text-lg mb-4">Social Networks</h2>
-              <p>Foolow us in social networks</p>
+              <h2 className="font-bold text-lg mb-4">
+                {t("prefooter_social_networks")}
+              </h2>
+              <p>{t("prefooter_social_networks_text")}</p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 self-end lg:self-auto ">
               <InstagramIcon className="text-slate-900 w-6 h-6" />
               <FacebookIcon className="text-slate-900 w-6 h-6" />
             </div>

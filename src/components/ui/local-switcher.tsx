@@ -32,7 +32,7 @@ export default function LocalSwitcher() {
           id="language"
           defaultValue={activeLocale}
           disabled={isPending}
-          className="appearance-none   bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+          className="appearance-none   bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  hover:bg-gray-100 md:hover:bg-transparent "
           onChange={handleLangugeSwitch}
         >
           <option

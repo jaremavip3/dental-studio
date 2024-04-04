@@ -11,6 +11,7 @@ import PreFooter from "@/components/prefooter";
 import { useTranslations } from "next-intl";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { pick } from "lodash";
+import Carousel from "@/components/carousel";
 
 export default function Home() {
   const messages = useMessages();
@@ -24,6 +25,7 @@ export default function Home() {
         <Wellcome />
         <main>
           <Services />
+          <Carousel />
           <Team />
           <NextIntlClientProvider messages={pick(messages, "Contact")}>
             <Contact />

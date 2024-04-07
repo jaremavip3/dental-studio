@@ -25,7 +25,9 @@ export default function Home() {
         <Wellcome />
         <main>
           <Services />
-          <Carousel />
+          <NextIntlClientProvider messages={pick(messages, "Carousel")}>
+            <Carousel />
+          </NextIntlClientProvider>
           <Team />
           <NextIntlClientProvider messages={pick(messages, "Contact")}>
             <Contact />

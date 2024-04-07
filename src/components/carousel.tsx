@@ -8,38 +8,58 @@ import { useCallback, useMemo, useRef, useState } from "react";
 
 const slides = [
   {
-    title: "Dental Implants",
-    img: "/carousel_implants.jpg",
-    width: 600,
-    height: 450,
+    title: "1_img_Teeth Whitening",
+    img: "/carousel_pics/1_teeth_whitening.webp",
     centered: true,
   },
   {
-    title: "Dental Cleaning",
-    img: "/carousel_cleaning.jpeg",
-    width: 500,
-    height: 325,
+    title: "2_img_Child_Dentistry",
+    img: "/carousel_pics/2_child_dentistry.webp",
     centered: true,
   },
   {
-    title: "Dental Orthodontology",
-    img: "/carousel_orthodontology.png",
-    width: 860,
-    height: 595,
+    title: "3_img_Dental_Filling",
+    img: "/carousel_pics/3_dental_filling.webp",
     centered: true,
   },
   {
-    title: "Dental Root Canal",
-    img: "/carousel_root.jpg",
-    width: 2500,
-    height: 2500,
+    title: "4_img_tooth_extraction",
+    img: "/carousel_pics/4_tooth_extraction.webp",
     centered: true,
   },
   {
-    title: "Dental Veneers",
-    img: "/carousel_veneers.jpg",
-    width: 500,
-    height: 400,
+    title: "5_img_Dental_Implants",
+    img: "/carousel_pics/5_dental_implants.webp",
+    centered: true,
+  },
+  {
+    title: "6_img_Hygiene",
+    img: "/carousel_pics/6_proffesional_oral_hygiene.webp",
+    centered: true,
+  },
+  {
+    title: "7_img_Tooth_decay",
+    img: "/carousel_pics/7_tooth_decay.webp",
+    centered: true,
+  },
+  {
+    title: "8_img_Gum_disease",
+    img: "/carousel_pics/8_gum_deasece.webp",
+    centered: true,
+  },
+  {
+    title: "9_img_Wisdom_teeth",
+    img: "/carousel_pics/9_wisdom_teeth.webp",
+    centered: true,
+  },
+  {
+    title: "10_img_Ortodontics",
+    img: "/carousel_pics/10_orthodontics.webp",
+    centered: true,
+  },
+  {
+    title: "11_img_Aligners",
+    img: "/carousel_pics/11_aligners.webp",
     centered: true,
   },
 ];
@@ -56,6 +76,7 @@ const scrollToSlide = (slider: HTMLUListElement | null, slideIndex: number) => {
 };
 
 export default function Carousel() {
+  const t = useTranslations("Carousel");
   const sliderRef = useRef<HTMLUListElement | null>(null);
   const [sliderPosition, setSliderPosition] = useState(0);
 
@@ -100,22 +121,17 @@ export default function Carousel() {
               className="snap-center snap-always shrink-0 mr-5 last:mr-0"
               key={slide.title}
             >
-              <div className="slide-center snap-center relative flex h-full flex-col bg-white w-[350px]  rounded-2xl">
-                <div
-                  className={classNames(
-                    "flex h-full justify-center",
-                    slide.centered ? "items-center" : "items-start"
-                  )}
-                >
+              <div className="slide-center snap-center relative flex h-full flex-col bg-white w-[350px]  rounded-2xl overflow-hidden p-2">
+                <div className="flex-grow relative rounded-2xl overflow-hidden">
                   <Image
                     src={slide.img}
                     alt={slide.title}
-                    width={slide.width}
-                    height={slide.height}
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </div>
-                <h3 className="mt-auto text-2xl font-semibold p-6">
-                  {slide.title}
+                <h3 className="mt-auto text-2xl font-semibold p-6 ">
+                  {t(slide.title)}
                 </h3>
               </div>
             </li>

@@ -30,6 +30,19 @@
     "services_cosmetic_dentistry_text": "Transform your smile with our cosmetic dentistry services, including teeth whitening, veneers, and smile makeovers.",
     "services_orthodontics_dentistry_text": "Achieve a straighter smile with our orthodontic treatments, including braces and clear aligners for patients of all ages."
   },
+  "Carousel": {
+    "1_img_Teeth Whitening": "Teeth whitening",
+    "2_img_Child_Dentistry": "Child dentistry",
+    "3_img_Dental_Filling": "Dental filling",
+    "4_img_tooth_extraction": "Tooth extraction",
+    "5_img_Dental_Implants": "Dental implants",
+    "6_img_Hygiene": "Proffesional oral hygiene",
+    "7_img_Tooth_decay": "Tooth decay treatment",
+    "8_img_Gum_disease": "Gum disease treatment",
+    "9_img_Wisdom_teeth": "Wisdom teeth removal",
+    "10_img_Ortodontics": "Orthodontic treatment",
+    "11_img_Aligners": "Clear aligners"
+  },
   "Team": {
     "team_header": "Meet our team",
     "team_text": "Our experienced and friendly team is dedicated to providing the best care for our patients.",

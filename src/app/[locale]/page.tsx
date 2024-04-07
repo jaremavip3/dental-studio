@@ -17,14 +17,13 @@ export default function Home() {
   const messages = useMessages();
   return (
     <>
-      <div className="flex flex-col min-h-[100dvh] overflow-y-auto bg-gradient-background ">
+      <div className="flex flex-col min-h-[100dvh] overflow-y-auto  ">
         <NextIntlClientProvider messages={pick(messages, "Navbar")}>
           <Navbar />
         </NextIntlClientProvider>
         <Head />
         <Wellcome />
         <main>
-          <Services />
           <NextIntlClientProvider messages={pick(messages, "Carousel")}>
             <Carousel />
           </NextIntlClientProvider>

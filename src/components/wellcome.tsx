@@ -9,7 +9,7 @@ export default function Wellcome() {
       className="w-full flex justify-center items- py-6 md:py-12 lg:py-24 xl:py-32 lg:mt-[72px] max-[403px]:mt-[112px] mt-[72px]"
       id="wellcome"
     >
-      <div className="container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
+      <div className=" container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             {t("welcome_header")}

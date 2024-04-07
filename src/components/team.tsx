@@ -6,6 +6,7 @@ export default function Team() {
   const t = useTranslations("Team");
   return (
     <section id="team" className="w-full py-12 md:py-24 lg:py-32">
+      <hr className="border-gray-500 mb-4"></hr>
       <div className=" grid mx-4 items-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -76,6 +77,7 @@ export default function Team() {
           </div>
         </div>
       </div>
+      <hr className="border-gray-500 mt-8"></hr>
     </section>
   );
 }

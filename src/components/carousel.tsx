@@ -103,11 +103,11 @@ export default function Carousel() {
   }, [currentSlide]);
 
   return (
-    <div className="bg-gray-200 min-h-screen font-sans py-16">
+    <div className=" min-h-screen font-sans py-16 " id="services">
+      <hr className="border-gray-500 mb-4"></hr>
       <h2 className="font-semibold text-6xl text-center text-balance mb-20">
-        A magical connection to your devices.
+        {t("carouse_heading")}
       </h2>
-
       <div className="h-[500px] overflow-hidden">
         <ul
           ref={sliderRef}
@@ -142,7 +142,7 @@ export default function Carousel() {
         <button
           disabled={currentSlide === 0}
           onClick={() => goToPreviousSlide()}
-          className="disabled:text-gray-400 disabled:border-gray-400 w-8 h-8 border-2 border-black rounded-full flex items-center justify-center mr-2"
+          className="disabled:text-gray-400 disabled:border-gray-400 w-8 h-8 border-2 border-black rounded-full flex items-center justify-center mr-2 hover:bg-gray-200 "
         >
           <span className="sr-only">Previous slide</span>
           <Chevron className="rotate-180 w-3 h-3" />
@@ -150,7 +150,7 @@ export default function Carousel() {
         <button
           disabled={scrolledToEndOfSlider || currentSlide === slides.length}
           onClick={() => goToNextSlide()}
-          className="disabled:text-gray-400 disabled:border-gray-400  w-8 h-8 border-2 border-black rounded-full flex items-center justify-center"
+          className="disabled:text-gray-400 disabled:border-gray-400  w-8 h-8 border-2 border-black rounded-full flex items-center justify-center hover:bg-gray-200"
         >
           <span className="sr-only">Next slide</span>
           <Chevron className=" w-3 h-3" />

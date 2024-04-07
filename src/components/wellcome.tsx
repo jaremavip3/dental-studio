@@ -6,7 +6,7 @@ export default function Wellcome() {
   const t = useTranslations("Welcome");
   return (
     <section
-      className="w-full flex justify-center items- py-6 md:py-12 lg:py-24 xl:py-32 lg:mt-[72px] max-[403px]:mt-[112px] mt-[72px]"
+      className="w-full mb-24  md:mb-0 flex justify-center items- py-6 md:py-12 lg:py-24 xl:py-32 lg:mt-[72px] max-[403px]:mt-[112px] mt-[72px]"
       id="wellcome"
     >
       <div className=" container flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
@@ -14,7 +14,7 @@ export default function Wellcome() {
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             {t("welcome_header")}
           </h1>
-          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
             {t("welcome_text")}
           </p>
         </div>

@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full flex justify-center py-12 md:py-24 lg:py-32 text-center md:px-6"
+      className="w-full flex justify-center py-12 md:py-24 lg:py-32 text-center md:px-6 text-xl"
     >
       <div className=" container grid items-center justify-center gap-4 px-4 ">
         <div className="space-y-2">

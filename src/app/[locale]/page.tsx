@@ -12,12 +12,13 @@ import { useTranslations } from "next-intl";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { pick } from "lodash";
 import Carousel from "@/components/carousel";
+import About from "@/components/about";
 
 export default function Home() {
   const messages = useMessages();
   return (
     <>
-      <div className="flex flex-col min-h-[100dvh] overflow-y-auto  ">
+      <div className="flex flex-col min-h-[100dvh] overflow-y-auto font-custom_font ">
         <NextIntlClientProvider messages={pick(messages, "Navbar")}>
           <Navbar />
         </NextIntlClientProvider>
@@ -28,6 +29,7 @@ export default function Home() {
             <Carousel />
           </NextIntlClientProvider>
           <Team />
+          <About />
           <NextIntlClientProvider messages={pick(messages, "Contact")}>
             <Contact />
           </NextIntlClientProvider>

@@ -104,8 +104,7 @@ export default function Carousel() {
 
   return (
     <div className=" min-h-screen font-sans py-16 " id="services">
-      <hr className="border-gray-500 mb-4"></hr>
-      <h2 className="font-semibold text-6xl text-center text-balance mb-20">
+      <h2 className="font-semibold text-6xl text-center text-balance mb-20 ">
         {t("carouse_heading")}
       </h2>
       <div className="h-[500px] overflow-hidden">
@@ -118,11 +117,11 @@ export default function Carousel() {
         >
           {slides.map((slide) => (
             <li
-              className="snap-center snap-always shrink-0 mr-5 last:mr-0"
+              className="snap-center snap-always shrink-0 mr-5 last:mr-0 "
               key={slide.title}
             >
-              <div className="slide-center snap-center relative flex h-full flex-col bg-white w-[350px]  rounded-2xl overflow-hidden p-2">
-                <div className="flex-grow relative rounded-2xl overflow-hidden">
+              <div className="slide-center snap-center relative flex h-full flex-col bg-white w-[350px]  rounded-3xl overflow-hidden  border-slate-950 border-2 shadow-md">
+                <div className="flex-grow relative  rounded-t-2xl overflow-hidden">
                   <Image
                     src={slide.img}
                     alt={slide.title}

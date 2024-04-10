@@ -1,0 +1,100 @@
+{
+  "Navbar": {
+    "navbar_welcome": "Вітаємо",
+    "navbar_services": "Послуги",
+    "navbar_team": "Лікарі",
+    "navbar_contact": "Контакти",
+    "navbar_language": "Вибрати мову",
+    "navbar_language_en": "Англійська",
+    "navbar_language_ua": "Українська"
+  },
+  "Welcome": {
+    "welcome_header": "Вітаємо в DZ Dental Studio",
+    "welcome_text": "Ваш надійний партнер для здорової та красивої посмішки.",
+    "welcome_image_alt": " Зображення стоматологічної клініки."
+  },
+
+  "Services": {
+    "services_header": "Наші послуги",
+    "services_text": "Ми пропонуємо широкий спектр стоматологічних послуг, щоб зберегти вашу посмішку здоровою та красивою.",
+
+    "services_general_dentistry_img_alt": "Зображення стоматологічних послуг",
+    "services_cosmetic_dentistry_img_alt": "Зображення послуг косметичної стоматології",
+    "services_orthodontics_dentistry_img_alt": "Зображення ортодонтичних послуг",
+
+    "services_general_dentistry_header": "Загальна Стоматологія",
+    "services_cosmetic_dentistry_header": "Косметична Стоматологія",
+    "services_orthodontics_dentistry_header": "Ортодонтія",
+
+    "services_general_dentistry_text": "Наші послуги із загальної стоматології включають регулярні огляди, чистку, пломбування та інше, щоб зберегти вашу посмішку здоровою.",
+    "services_cosmetic_dentistry_text": "Трансформуйте свою посмішку за допомогою наших послуг з косметичної стоматології, включаючи відбілювання зубів, вініри та реконструкцію посмішки.",
+    "services_orthodontics_dentistry_text": "Досягніть рівнішої посмішки завдяки нашим ортодонтичним процедурам, включаючи брекети та прозорі елайнери для пацієнтів різного віку."
+  },
+  "Carousel": {
+    "carouse_heading": "Наші послуги",
+    "1_img_Teeth Whitening": "Відбілювання зубів",
+    "2_img_Child_Dentistry": "Дитяча стоматологія",
+    "3_img_Dental_Filling": "Пломбування зубів",
+    "4_img_tooth_extraction": "Видалення зубів",
+    "5_img_Dental_Implants": "Стоматологічні імпланти",
+    "6_img_Hygiene": "Професійна гігієна порожнини рота",
+    "7_img_Tooth_decay": "Лікування карієсу",
+    "8_img_Gum_disease": "Лікування захворювань ясен",
+    "9_img_Wisdom_teeth": "Видалення зубів мудрості",
+    "10_img_Ortodontics": "Ортодонтичне лікування",
+    "11_img_Aligners": "Прозорі елайнери"
+  },
+  "Team": {
+    "team_header": "Наші Лікарі",
+    "team_text": "Наша досвідчена та дружня команда віддана наданню найкращої допомоги нашим пацієнтам.",
+
+    "team_member_photo_alt": "фото члена коменди",
+
+    "team_doctor1_name": "Лікар Діана Жаровська",
+    "team_doctor2_name": "Лікар Джейн Смі",
+    "team_doctor3_name": "Лікар Сара Джонсон",
+
+    "team_doctor1_bio": "Лікар Діана Жаровська - ліцензований стоматолог з понад 10-річним досвідом роботи в галузі загальної та косметичної стоматології.",
+    "team_doctor2_bio": "Джейн Сміт - зареєстрований стоматолог-гігієніст, яка захоплюється допомогою пацієнтам у підтримці оптимального здоров'я ротової порожнини. ",
+    "team_doctor3_bio": "Сара Джонсон — сертифікований асистент стоматолога з дружньою та турботливою поведінкою. "
+  },
+  "Contact": {
+    "contact_header": "Зв'яжіться З Нами",
+    "contact_text": "Ми раді будемо почути від вас. Будь ласка, зв'яжіться з нами, якщо маєте запитання або хочете записатися на прийом.",
+
+    "contact_form_name": "Ваше Імʼя",
+    "contact_form_email": "Електронна пошта",
+    "contact_form_message": "Повідомлення",
+
+    "contact_form_placeholder_name": "Введіть своє ім'я та празвище",
+    "contact_form_placeholder_email": "Введіть свою електронну адресу",
+    "contact_form_placeholder_message": "Введіть своє повідомлення",
+    "contact_form_submit": "Надіслати"
+  },
+  "Map": {
+    "map_language_ua": "uk",
+    "map_region_ua": "uk",
+    "map_language_en": "en",
+    "map_region_en": "ca"
+  },
+  "Prefooter": {
+    "prefooter_adress": "Адреса",
+    "prefooter_phone": "Телефон",
+    "prefooter_email": "Електронна пошта",
+    "prefooter_working_hours": "Робочі години",
+    "prefooter_social_networks": "Соціальні мережі",
+
+    "prefooter_working_hours_during_week_days": "Вівторок-П'ятниця 9:00-18:00",
+    "prefooter_working_hours_saturday_day": "Субота 9:00-13:00",
+    "prefooter_working_hours_sunday_day": "Неділя-Понеділок зачинено",
+
+    "prefooter_adress_text": "585 Annette Street",
+
+    "prefooter_social_networks_text": "Слідкуйте за нами в соціальних мережах"
+  },
+  "Footer": {
+    "footer_text": "© 2024 Smiles Dental Clinic. Всі права захищені.",
+    "footer_terms": "Умови Користування",
+    "footer_privacy": "Політика Конфіденційності"
+  }
+}

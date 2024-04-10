@@ -1,9 +1,11 @@
 "use client";
 import Label from "next";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
 export default function Contact() {
+  const t = useTranslations("Contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -56,16 +58,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-100 text-center md:px-6"
+      className="w-full flex justify-center py-12 md:py-24 lg:py-32 text-center md:px-6 text-xl"
     >
       <div className=" container grid items-center justify-center gap-4 px-4 ">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Contact Us 🤙
+            {t("contact_header")}🤙
           </h2>
-          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Ready to schedule an appointment or have questions about our
-            services? Contact our friendly team today.
+          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+            {t("contact_text")}
           </p>
         </div>
         <div className="h-full grid place-items-center">
@@ -76,20 +77,20 @@ export default function Contact() {
             <div className="space-y-2 flex flex-col">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900 "
               >
-                Full Name
+                {t("contact_form_name")}
               </label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 autoComplete="name"
-                placeholder="Enter your name"
+                placeholder={t("contact_form_placeholder_name")}
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               />
             </div>
             <div className="space-y-2 flex flex-col">
@@ -97,18 +98,18 @@ export default function Contact() {
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Email
+                {t("contact_form_email")}
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 autoComplete="email"
-                placeholder="Enter your email"
+                placeholder={t("contact_form_placeholder_email")}
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
               />
             </div>
             <div className="space-y-2 flex flex-col ">
@@ -116,13 +117,13 @@ export default function Contact() {
                 htmlFor="message"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Message
+                {t("contact_form_message")}
               </label>
               <textarea
-                className="min-h-[130px] resize-y block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="min-h-[130px] resize-y block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  "
                 id="message"
                 name="message"
-                placeholder="Enter your message"
+                placeholder={t("contact_form_placeholder_message")}
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -138,7 +139,7 @@ export default function Contact() {
                     className="w-6 h-6 border-4 border-white border-solid rounded-full animate-spin"
                   ></div>
                 ) : (
-                  "Submit"
+                  t("contact_form_submit")
                 )}
               </button>
             </div>

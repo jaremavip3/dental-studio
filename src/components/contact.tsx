@@ -61,11 +61,11 @@ export default function Contact() {
       className="w-full flex justify-center py-12 md:py-24 lg:py-32 text-center md:px-6 text-xl"
     >
       <div className=" container grid items-center justify-center gap-4 px-4 ">
-        <div className="space-y-2">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+        <div className="space-y-2 text-primary">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl ">
             {t("contact_header")}🤙
           </h2>
-          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+          <p className="mx-auto max-w-[600px] text-secondary md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
             {t("contact_text")}
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function Contact() {
             <div className="space-y-2 flex flex-col">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900 "
+                className="block mb-2 text-sm font-medium text-background "
               >
                 {t("contact_form_name")}
               </label>
@@ -90,13 +90,13 @@ export default function Contact() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                className="bg-secondary border border-gray-300 text-background text-sm rounded-lg focus:ring-accent focus:border-accent block w-full p-2.5 "
               />
             </div>
             <div className="space-y-2 flex flex-col">
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-background "
               >
                 {t("contact_form_email")}
               </label>
@@ -109,18 +109,18 @@ export default function Contact() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  "
+                className="bg-secondary border border-gray-300 text-background text-sm rounded-lg focus:ring-accent focus:border-accent block w-full p-2.5  "
               />
             </div>
             <div className="space-y-2 flex flex-col ">
               <label
                 htmlFor="message"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-background "
               >
                 {t("contact_form_message")}
               </label>
               <textarea
-                className="min-h-[130px] resize-y block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  "
+                className="min-h-[130px] resize-y block p-2.5 w-full text-sm text-gray-900 bg-secondary rounded-lg border border-gray-300 focus:ring-accent focus:border-accent  "
                 id="message"
                 name="message"
                 placeholder={t("contact_form_placeholder_message")}
@@ -131,12 +131,12 @@ export default function Contact() {
               <button
                 type="submit"
                 className="
-               flex justify-center rounded-md bg-cyan-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-600"
+               flex justify-center rounded-md bg-background border-2 border-accent px-3.5 py-2.5 text-sm font-semibold text-accent shadow-sm hover:bg-accent hover:text-background"
               >
                 {loading ? (
                   <div
                     style={{ borderTopColor: "transparent" }}
-                    className="w-6 h-6 border-4 border-white border-solid rounded-full animate-spin"
+                    className="w-6 h-6 border-4 border-primary border-solid rounded-full animate-spin"
                   ></div>
                 ) : (
                   t("contact_form_submit")

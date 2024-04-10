@@ -24,3 +24,19 @@ html {
     );
   }
 }
+
+.reveal-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.reveal-content {
+  height: 200vh; /* Adjust height as needed */
+  transform: translateY(100%);
+  transition: transform 1s ease-out;
+}
+
+/* Add an 'active' class dynamically with JavaScript */
+.reveal-content.active {
+  transform: translateY(0);
+}

@@ -32,17 +32,17 @@ export default function LocalSwitcher() {
           id="language"
           defaultValue={activeLocale}
           disabled={isPending}
-          className="appearance-none   bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  hover:bg-gray-100 md:hover:bg-transparent "
+          className="appearance-none   bg-secondary border border-gray-300 text-bac text-sm rounded-lg focus:ring-accent focus:border-accent block w-full p-2.5  hover:bg-gray-100 md:hover:bg-transparent "
           onChange={handleLangugeSwitch}
         >
           <option
-            className="appearance-none inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100 "
+            className="appearance-none inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-background rounded-lg cursor-pointer hover:bg-gray-100 "
             value="en"
           >
             {t("navbar_language_en")}
           </option>
           <option
-            className="appearance-none inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100 "
+            className="appearance-none inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-background rounded-lg cursor-pointer hover:bg-gray-100 "
             value="ua"
           >
             {t("navbar_language_ua")}

@@ -18,11 +18,12 @@ export default function Home() {
   const messages = useMessages();
   return (
     <>
-      <div className="flex flex-col min-h-[100dvh] overflow-y-auto font-custom_font ">
+      <div className="flex flex-col min-h-[100dvh] overflow-y-auto font-custom_font bg-background">
         <NextIntlClientProvider messages={pick(messages, "Navbar")}>
           <Navbar />
         </NextIntlClientProvider>
         <Head />
+
         <Wellcome />
         <main>
           <NextIntlClientProvider messages={pick(messages, "Carousel")}>

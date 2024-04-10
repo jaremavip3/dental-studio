@@ -14,7 +14,7 @@ export default function About() {
           <div>
             <Image
               className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+              src="/test_img.webp"
               alt=""
               width={400}
               height={400}

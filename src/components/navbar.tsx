@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className="bg-white border-gray-200  fixed w-full top-0 duration-300 z-10"
+      className="bg-primary   fixed w-full top-0 duration-500 z-10"
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
@@ -70,7 +70,7 @@ export default function Navbar() {
           <LocalSwitcher />
           <button
             type="button"
-            className="appearance-none inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 bg-gray-50 border border-gray-300"
+            className="appearance-none inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-background rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 bg-gray-50 border border-gray-300"
             aria-controls="navbar-language"
             aria-expanded="false"
             onClick={handleClickOnNavbar}
@@ -123,7 +123,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#wellcome"
-                    className="block py-2 px-3  text-gray-900 rounded hover:bg-gray-100    "
+                    className="block py-2 px-3  text-background rounded hover:bg-accent    "
                     aria-current="page"
                   >
                     {t("navbar_welcome")}
@@ -133,7 +133,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#services"
-                    className="block py-2 px-3  text-gray-900 rounded hover:bg-gray-100    "
+                    className="block py-2 px-3  text-background rounded hover:bg-accent    "
                   >
                     {t("navbar_services")}
                   </a>
@@ -141,7 +141,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#team"
-                    className="block py-2 px-3  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent  "
+                    className="block py-2 px-3  text-background rounded hover:bg-accent  "
                   >
                     {t("navbar_team")}
                   </a>
@@ -149,7 +149,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#contact"
-                    className="block py-2 px-3  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
+                    className="block py-2 px-3  text-background rounded hover:bg-accent  "
                   >
                     {t("navbar_contact")}
                   </a>
@@ -159,11 +159,11 @@ export default function Navbar() {
           </>
         )}
         <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
             <li>
               <a
                 href="#wellcome"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  "
+                className="block py-2 px-3 md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:hover:text-yellow-500  "
                 aria-current="page"
               >
                 {t("navbar_welcome")}
@@ -173,7 +173,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#services"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  "
+                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500  "
               >
                 {t("navbar_services")}
               </a>
@@ -181,7 +181,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#team"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
+                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 "
               >
                 {t("navbar_team")}
               </a>
@@ -189,7 +189,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
+                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 "
               >
                 {t("navbar_contact")}
               </a>

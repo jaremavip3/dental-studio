@@ -120,8 +120,8 @@ export default function Carousel() {
               className="snap-center snap-always shrink-0 mr-5 last:mr-0 "
               key={slide.title}
             >
-              <div className="slide-center snap-center relative flex h-full flex-col bg-white w-[350px]  rounded-3xl overflow-hidden  border-slate-950 border-2 shadow-md">
-                <div className="flex-grow relative  rounded-t-2xl overflow-hidden">
+              <div className="slide-center snap-center relative flex h-full flex-col bg-primary w-[350px]  rounded-3xl overflow-hidden  border-primary border-2 shadow-md">
+                <div className="flex-grow relative  rounded-t-2xl overflow-hidden ">
                   <Image
                     src={slide.img}
                     alt={slide.title}
@@ -129,7 +129,7 @@ export default function Carousel() {
                     objectFit="cover"
                   />
                 </div>
-                <h3 className="mt-auto text-2xl font-semibold p-6 ">
+                <h3 className="mt-auto text-2xl font-semibold p-6 text-background">
                   {t(slide.title)}
                 </h3>
               </div>
@@ -141,7 +141,7 @@ export default function Carousel() {
         <button
           disabled={currentSlide === 0}
           onClick={() => goToPreviousSlide()}
-          className="disabled:text-gray-400 disabled:border-gray-400 w-8 h-8 border-2 border-black rounded-full flex items-center justify-center mr-2 hover:bg-gray-200 "
+          className="disabled:text-gray-500 disabled:border-gray-500 w-8 h-8 border-2 border-accent rounded-full flex items-center justify-center mr-2 hover:bg-gray-500 text-accent"
         >
           <span className="sr-only">Previous slide</span>
           <Chevron className="rotate-180 w-3 h-3" />
@@ -149,7 +149,7 @@ export default function Carousel() {
         <button
           disabled={scrolledToEndOfSlider || currentSlide === slides.length}
           onClick={() => goToNextSlide()}
-          className="disabled:text-gray-400 disabled:border-gray-400  w-8 h-8 border-2 border-black rounded-full flex items-center justify-center hover:bg-gray-200"
+          className="disabled:text-gray-500 disabled:border-gray-500  w-8 h-8 border-2 border-accent  rounded-full flex items-center justify-center hover:bg-gray-500 text-accent"
         >
           <span className="sr-only">Next slide</span>
           <Chevron className=" w-3 h-3" />

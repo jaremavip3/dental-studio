@@ -149,35 +149,35 @@ export default function PreFooter() {
   }
 
   return (
-    <section className="w-full text-slate-900 p-8 bg-white">
+    <section className="w-full text-primary p-8 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
         <div>
           <h2 className="font-bold text-lg mb-4">{t("prefooter_adress")}</h2>
-          <MapPinIcon className="text-slate-900 w-6 h-6 mb-2" />
+          <MapPinIcon className="text-accent w-6 h-6 mb-2" />
           <p>{t("prefooter_adress_text")}</p>
         </div>
         <div>
           <h2 className="font-bold text-lg mb-4">{t("prefooter_phone")}</h2>
-          <PhoneIcon className="text-slate-900 w-6 h-6 mb-2" />
+          <PhoneIcon className="text-accent w-6 h-6 mb-2" />
           <p>416-998-4853</p>
         </div>
         <div>
           <h2 className="font-bold text-lg mb-4">{t("prefooter_email")}</h2>
-          <MailboxIcon className="text-slate-900 w-6 h-6 mb-2" />
+          <MailboxIcon className="text-accent w-6 h-6 mb-2" />
           <p>info@dzdental.ca</p>
         </div>
         <div>
           <h2 className="font-bold text-lg mb-4">
             {t("prefooter_working_hours")}
           </h2>
-          <WorkingHourIcon className="text-slate-900 w-6 h-6 mb-2" />
+          <WorkingHourIcon className="text-primary w-6 h-6 mb-2" />
           <p>{t("prefooter_working_hours_during_week_days")}</p>
           <p>{t("prefooter_working_hours_saturday_day")}</p>
           <p>{t("prefooter_working_hours_sunday_day")}</p>
         </div>
 
         <div className="lg:col-span-4 md:col-span-2">
-          <div className="flex gap-4 flex-col lg:flex-row justify-between items-center lg:items-start mt-8 border-t-4 border-slate-950 pt-4 ">
+          <div className="flex gap-4 flex-col lg:flex-row justify-between items-center lg:items-start mt-8 border-t-4 border-background pt-4 ">
             <div>
               <h2 className="font-bold text-lg mb-4">
                 {t("prefooter_social_networks")}
@@ -185,13 +185,13 @@ export default function PreFooter() {
               <p>{t("prefooter_social_networks_text")}</p>
             </div>
             <div className="flex space-x-4 self-end lg:self-auto ">
-              <InstagramIcon className="text-slate-900 w-6 h-6" />
-              <FacebookIcon className="text-slate-900 w-6 h-6" />
+              <InstagramIcon className="text-accent w-6 h-6" />
+              <FacebookIcon className="text-accent w-6 h-6" />
             </div>
           </div>
           <div className="flex justify-center mt-8">
             <div className="flex items-center">
-              <div className="rounded-full bg-white p-2">
+              <div className="rounded-full bg-primary p-2">
                 <SmileIcon className="text-[#2D3E50] w-8 h-8" />
               </div>
               <h1 className="font-bold text-xl ml-4">DZ Dental Studio</h1>

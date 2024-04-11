@@ -48,29 +48,34 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className="bg-primary   fixed w-full top-0 duration-500 z-10"
+      className="  fixed w-full top-0 duration-500 z-10 text-primary "
     >
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-nowrap gap-2 items-center justify-between mx-auto py-4 px-3 sm:p-4">
         <a
           href="https://dz-dental-studio.vercel.app/#wellcome"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
+          className="flex items-center px-3 sm:py-1 py-2 sm:px-4 space-x-3 rtl:space-x-reverse bg-accent/80 rounded-full  text-background transition duration-300 ease-in-out hover:scale-105 hover:bg-accent"
         >
           <Image
             src="/dental-svgrepo-com.png"
             width="40"
             height="40"
             alt="Teeth icon"
+            className="w-8 h-8 sm:w-[40px] sm:h-[40px]"
           />
 
           <span className="self-center text-2xl font-semibold  ">
             DZ Studio
           </span>
         </a>
-        <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse gap-2">
           <LocalSwitcher />
           <button
             type="button"
-            className="appearance-none inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-background rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 bg-gray-50 border border-gray-300"
+            className={`appearance-none inline-flex items-center rounded-full w-12 h-12 justify-center text-sm text-background  md:hidden hover:bg-accent transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent bg-accent/80 focus::bg-green-300  ${
+              isClicked
+                ? "scale-110 bg-accent hover:scale-110"
+                : "scale-100 bg-accent/80"
+            }`}
             aria-controls="navbar-language"
             aria-expanded="false"
             onClick={handleClickOnNavbar}
@@ -119,11 +124,11 @@ export default function Navbar() {
               className="items-center justify-between  w-full "
               id="navbar-hidden-menu"
             >
-              <ul className="flex flex-col font-medium p-4  mt-5 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse ">
+              <ul className="flex flex-col font-medium p-4  mt-5 border-2  border-primary rounded-2xl text-white bg-background/90 md:space-x-8 rtl:space-x-reverse ">
                 <li>
                   <a
                     href="#wellcome"
-                    className="block py-2 px-3  text-background rounded hover:bg-accent    "
+                    className="block py-2 px-3  mx-3  rounded hover:bg-accent   transition duration-300 ease-in-out hover:scale-105  "
                     aria-current="page"
                   >
                     {t("navbar_welcome")}
@@ -133,7 +138,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#services"
-                    className="block py-2 px-3  text-background rounded hover:bg-accent    "
+                    className="block py-2 px-3 mx-3   rounded hover:bg-accent transition duration-300 ease-in-out hover:scale-105  "
                   >
                     {t("navbar_services")}
                   </a>
@@ -141,7 +146,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#team"
-                    className="block py-2 px-3  text-background rounded hover:bg-accent  "
+                    className="block py-2 px-3 mx-3   rounded hover:bg-accent transition duration-300 ease-in-out hover:scale-105 "
                   >
                     {t("navbar_team")}
                   </a>
@@ -149,7 +154,7 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#contact"
-                    className="block py-2 px-3  text-background rounded hover:bg-accent  "
+                    className="block py-2 px-3 mx-3 rounded hover:bg-accent transition duration-300 ease-in-out hover:scale-105  "
                   >
                     {t("navbar_contact")}
                   </a>
@@ -158,12 +163,12 @@ export default function Navbar() {
             </div>
           </>
         )}
-        <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
+        <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 ">
+          <ul className="flex flex-col font-medium p-3 px-10  rounded-full mt-4 border hover:bg-accent text-background/100  bg-accent/80  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 transition duration-300 ease-in-out hover:scale-105">
             <li>
               <a
                 href="#wellcome"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:hover:text-yellow-500  "
+                className="block py-2 px-3 md:p-0  rounded  md:hover:bg-transparent md:hover:text-primary  "
                 aria-current="page"
               >
                 {t("navbar_welcome")}
@@ -173,7 +178,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#services"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500  "
+                className="block py-2 px-3 md:p-0  rounded  md:hover:bg-transparent md:hover:text-primary  "
               >
                 {t("navbar_services")}
               </a>
@@ -181,7 +186,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#team"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 "
+                className="block py-2 px-3 md:p-0  rounded  md:hover:bg-transparent md:hover:text-primary "
               >
                 {t("navbar_team")}
               </a>
@@ -189,7 +194,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 "
+                className="block py-2 px-3 md:p-0 rounded  md:hover:bg-transparent md:hover:text-primary "
               >
                 {t("navbar_contact")}
               </a>

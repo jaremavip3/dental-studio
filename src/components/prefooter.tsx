@@ -170,7 +170,7 @@ export default function PreFooter() {
           <h2 className="font-bold text-lg mb-4">
             {t("prefooter_working_hours")}
           </h2>
-          <WorkingHourIcon className="text-primary w-6 h-6 mb-2" />
+          <WorkingHourIcon className=" bg-accent rounded-full w-6 h-6 mb-2" />
           <p>{t("prefooter_working_hours_during_week_days")}</p>
           <p>{t("prefooter_working_hours_saturday_day")}</p>
           <p>{t("prefooter_working_hours_sunday_day")}</p>
@@ -189,6 +189,7 @@ export default function PreFooter() {
               <FacebookIcon className="text-accent w-6 h-6" />
             </div>
           </div>
+          <hr className="my-12 h-[2px] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-accent to-transparent opacity-35" />
           <div className="flex justify-center mt-8">
             <div className="flex items-center">
               <div className="rounded-full bg-primary p-2">

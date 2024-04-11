@@ -109,18 +109,18 @@ export default function Contact() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-secondary border border-gray-300 text-background text-sm rounded-lg focus:ring-accent focus:border-accent block w-full p-2.5  "
+                className="bg-secondary border border-gray-300 text-background text-base rounded-lg focus:ring-accent focus:border-accent block w-full p-2.5  "
               />
             </div>
             <div className="space-y-2 flex flex-col ">
               <label
                 htmlFor="message"
-                className="block mb-2 text-sm font-medium text-background "
+                className="block mb-2 text-base font-medium text-background "
               >
                 {t("contact_form_message")}
               </label>
               <textarea
-                className="min-h-[130px] resize-y block p-2.5 w-full text-sm text-gray-900 bg-secondary rounded-lg border border-gray-300 focus:ring-accent focus:border-accent  "
+                className="min-h-[130px] resize-y block p-2.5 w-full text-base text-background bg-secondary rounded-lg border border-gray-300 focus:ring-accent focus:border-accent  "
                 id="message"
                 name="message"
                 placeholder={t("contact_form_placeholder_message")}
@@ -131,7 +131,7 @@ export default function Contact() {
               <button
                 type="submit"
                 className="
-               flex justify-center rounded-md bg-background border-2 border-accent px-3.5 py-2.5 text-sm font-semibold text-accent shadow-sm hover:bg-accent hover:text-background"
+               flex justify-center rounded-md bg-background border-2 border-accent px-3.5 py-2.5 text-base font-semibold text-accent shadow-sm hover:bg-accent hover:text-background transition duration-300 ease-in-out hover:scale-105"
               >
                 {loading ? (
                   <div

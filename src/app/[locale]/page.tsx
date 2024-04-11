@@ -13,6 +13,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import { pick } from "lodash";
 import Carousel from "@/components/carousel";
 import About from "@/components/about";
+import MovingLine from "@/components/moving-line";
 
 export default function Home() {
   const messages = useMessages();
@@ -25,6 +26,7 @@ export default function Home() {
         <Head />
 
         <Wellcome />
+        <MovingLine />
         <main>
           <NextIntlClientProvider messages={pick(messages, "Carousel")}>
             <Carousel />

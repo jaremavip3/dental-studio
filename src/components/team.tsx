@@ -5,8 +5,8 @@ import { useTranslations } from "next-intl";
 export default function Team() {
   const t = useTranslations("Team");
   return (
-    <section id="team" className="w-full py-12 md:py-24 lg:py-32">
-      <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 " />
+    <section id="team" className="w-full pb-0 pt-0  sm:py-12 md:py-24 lg:py-32">
+      <hr className="mb-12 mt-12 sm:mt-0  h-[2px] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-accent to-transparent opacity-35" />
       <div className=" grid mx-4 items-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-2 text-primary">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -71,7 +71,7 @@ export default function Team() {
           </div>
         </div>
       </div>
-      <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 " />
+      <hr className="mt-12 h-[2px] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-accent to-transparent opacity-35" />
     </section>
   );
 }

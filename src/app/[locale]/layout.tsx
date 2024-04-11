@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Dental Clinic",
   description: "Made with love from jaremavip",
@@ -21,7 +19,7 @@ export default function RootLayout({
 }: Readonly<RootLayoutProps>) {
   return (
     <html className="scroll-smooth" lang={locale}>
-      <body className={inter.className}>
+      <body>
         <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
         {children}
       </body>

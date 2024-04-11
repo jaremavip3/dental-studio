@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <div className="w-full">
-      <h2 className="font-semibold text-6xl text-center text-balance mb-20 ">
+      <h2 className="font-semibold text-6xl text-center text-balance sm:mb-20 ">
         About us
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

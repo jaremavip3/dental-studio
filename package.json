@@ -13,6 +13,7 @@
     "@react-email/components": "^0.0.15",
     "classnames": "^2.5.1",
     "flag-icons": "^7.2.1",
+    "framer-motion": "^11.0.28",
     "lodash": "^4.17.21",
     "next": "^14.1.4",
     "next-intl": "^3.10.0",

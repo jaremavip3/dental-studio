@@ -103,17 +103,17 @@ export default function Carousel() {
   }, [currentSlide]);
 
   return (
-    <div className=" min-h-screen font-sans py-16 " id="services">
-      <h2 className="font-semibold text-6xl text-center text-balance mb-20 ">
+    <div className=" py-0 sm:min-h-screen sm:py-16 font-sans  " id="services">
+      <h2 className="font-semibold text-6xl text-center text-primary text-balance mb-10 sm:mb-20 ">
         {t("carouse_heading")}
       </h2>
-      <div className="h-[500px] overflow-hidden">
+      <div className="h-[445px] sm:h-[500px] overflow-hidden">
         <ul
           ref={sliderRef}
           onScroll={(ev) => {
             setSliderPosition(ev.currentTarget.scrollLeft);
           }}
-          className="flex h-[540px] pb-10 overflow-x-auto snap-x snap-mandatory"
+          className="flex h-[460px] sm:h-[540px] pb-10 overflow-x-auto snap-x snap-mandatory"
         >
           {slides.map((slide) => (
             <li

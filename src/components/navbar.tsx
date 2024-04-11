@@ -50,7 +50,7 @@ export default function Navbar() {
       id="navbar"
       className="  fixed w-full top-0 duration-500 z-10 text-primary "
     >
-      <div className="max-w-screen-xl flex flex-nowrap gap-2 items-center justify-between mx-auto py-4 px-3 sm:p-4">
+      <div className="max-w-screen-xl flex flex-wrap gap-2 items-center justify-between mx-auto py-4 px-3 sm:p-4">
         <a
           href="https://dz-dental-studio.vercel.app/#wellcome"
           className="flex items-center px-3 sm:py-1 py-2 sm:px-4 space-x-3 rtl:space-x-reverse bg-accent/80 rounded-full  text-background transition duration-300 ease-in-out hover:scale-105 hover:bg-accent"
@@ -67,14 +67,14 @@ export default function Navbar() {
             DZ Studio
           </span>
         </a>
-        <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse gap-2">
+        <div className="flex items-center md:order-2  space-x-1 md:space-x-0 rtl:space-x-reverse gap-2">
           <LocalSwitcher />
           <button
             type="button"
             className={`appearance-none inline-flex items-center rounded-full w-12 h-12 justify-center text-sm text-background  md:hidden hover:bg-accent transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent bg-accent/80 focus::bg-green-300  ${
               isClicked
-                ? "scale-110 bg-accent hover:scale-110"
-                : "scale-100 bg-accent/80"
+                ? "scale-110 bg-accent hover:scale-110 rounded-xl "
+                : "scale-100 bg-accent/80 "
             }`}
             aria-controls="navbar-language"
             aria-expanded="false"
@@ -124,7 +124,7 @@ export default function Navbar() {
               className="items-center justify-between  w-full "
               id="navbar-hidden-menu"
             >
-              <ul className="flex flex-col font-medium p-4  mt-5 border-2  border-primary rounded-2xl text-white bg-background/90 md:space-x-8 rtl:space-x-reverse ">
+              <ul className="flex flex-col font-medium p-4 mt-1  border-2  border-primary rounded-2xl text-white bg-background/90 md:space-x-8 rtl:space-x-reverse ">
                 <li>
                   <a
                     href="#wellcome"

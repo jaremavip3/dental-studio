@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+
+import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import LocalSwitcher from "@/components/ui/local-switcher";
-import { useTranslations } from "next-intl";
+import LocalSwitcher from "@/components/Local-switcher";
 
 export default function Navbar() {
   const t = useTranslations("Navbar");

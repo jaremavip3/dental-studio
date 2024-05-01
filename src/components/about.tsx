@@ -14,7 +14,7 @@ export default function About() {
           <div>
             <Image
               className="h-auto max-w-full rounded-lg"
-              src="/test_img.webp"
+              src="/test_img 11.07.32.webp"
               alt=""
               width={400}
               height={400}

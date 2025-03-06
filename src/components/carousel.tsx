@@ -5,61 +5,72 @@ import { title } from "process";
 import classNames from "classnames";
 import { Chevron } from "@/icons/chevron";
 import { useCallback, useMemo, useRef, useState } from "react";
+import carousel_image_1 from "../../public/carousel_pics/1_teeth_whitening.webp";
+import carousel_image_2 from "../../public/carousel_pics/2_child_dentistry.webp";
+import carousel_image_3 from "../../public/carousel_pics/3_dental_filling.webp";
+import carousel_image_4 from "../../public/carousel_pics/4_tooth_extraction.webp";
+import carousel_image_5 from "../../public/carousel_pics/5_dental_implants.webp";
+import carousel_image_6 from "../../public/carousel_pics/6_proffesional_oral_hygiene.webp";
+import carousel_image_7 from "../../public/carousel_pics/7_tooth_decay.webp";
+import carousel_image_8 from "../../public/carousel_pics/8_gum_deasece.webp";
+import carousel_image_9 from "../../public/carousel_pics/9_wisdom_teeth.webp";
+import carousel_image_10 from "../../public/carousel_pics/10_orthodontics.webp";
+import carousel_image_11 from "../../public/carousel_pics/11_aligners.webp";
 
 const slides = [
   {
     title: "1_img_Teeth Whitening",
-    img: "/carousel_pics/1_teeth_whitening.webp",
+    img: carousel_image_1,
     centered: true,
   },
   {
     title: "2_img_Child_Dentistry",
-    img: "/carousel_pics/2_child_dentistry.webp",
+    img: carousel_image_2,
     centered: true,
   },
   {
     title: "3_img_Dental_Filling",
-    img: "/carousel_pics/3_dental_filling.webp",
+    img: carousel_image_3,
     centered: true,
   },
   {
     title: "4_img_tooth_extraction",
-    img: "/carousel_pics/4_tooth_extraction.webp",
+    img: carousel_image_4,
     centered: true,
   },
   {
     title: "5_img_Dental_Implants",
-    img: "/carousel_pics/5_dental_implants.webp",
+    img: carousel_image_5,
     centered: true,
   },
   {
     title: "6_img_Hygiene",
-    img: "/carousel_pics/6_proffesional_oral_hygiene.webp",
+    img: carousel_image_6,
     centered: true,
   },
   {
     title: "7_img_Tooth_decay",
-    img: "/carousel_pics/7_tooth_decay.webp",
+    img: carousel_image_7,
     centered: true,
   },
   {
     title: "8_img_Gum_disease",
-    img: "/carousel_pics/8_gum_deasece.webp",
+    img: carousel_image_8,
     centered: true,
   },
   {
     title: "9_img_Wisdom_teeth",
-    img: "/carousel_pics/9_wisdom_teeth.webp",
+    img: carousel_image_9,
     centered: true,
   },
   {
     title: "10_img_Ortodontics",
-    img: "/carousel_pics/10_orthodontics.webp",
+    img: carousel_image_10,
     centered: true,
   },
   {
     title: "11_img_Aligners",
-    img: "/carousel_pics/11_aligners.webp",
+    img: carousel_image_11,
     centered: true,
   },
 ];
@@ -86,12 +97,7 @@ export default function Carousel() {
 
   const scrolledToEndOfSlider = useMemo(() => {
     if (!sliderRef.current) return false;
-    return (
-      sliderRef.current.scrollWidth -
-        sliderRef.current.scrollLeft -
-        sliderRef.current.clientWidth ===
-      0
-    );
+    return sliderRef.current.scrollWidth - sliderRef.current.scrollLeft - sliderRef.current.clientWidth === 0;
   }, [sliderPosition]);
 
   const goToNextSlide = useCallback(() => {
@@ -116,10 +122,7 @@ export default function Carousel() {
           className="flex h-[460px] sm:h-[540px] pb-10 overflow-x-auto snap-x snap-mandatory"
         >
           {slides.map((slide) => (
-            <li
-              className="snap-center snap-always shrink-0 mr-5 last:mr-0 "
-              key={slide.title}
-            >
+            <li className="snap-center snap-always shrink-0 mr-5 last:mr-0 " key={slide.title}>
               <div className="slide-center snap-center relative flex h-full flex-col bg-primary w-[350px]  rounded-3xl overflow-hidden  border-primary border-2 shadow-md">
                 <div className="flex-grow relative  rounded-t-2xl overflow-hidden ">
                   <Image
@@ -127,11 +130,11 @@ export default function Carousel() {
                     alt={slide.title}
                     layout="fill"
                     objectFit="cover"
+                    placeholder="blur"
+                    loading="eager"
                   />
                 </div>
-                <h3 className="mt-auto text-2xl font-semibold p-6 text-background">
-                  {t(slide.title)}
-                </h3>
+                <h3 className="mt-auto text-2xl font-semibold p-6 text-background">{t(slide.title)}</h3>
               </div>
             </li>
           ))}

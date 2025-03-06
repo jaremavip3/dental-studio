@@ -13,6 +13,7 @@ export default function Map() {
         q={location}
         style="border:0"
         zoom="14"
+        loading="eager"
       />
     </section>
   );

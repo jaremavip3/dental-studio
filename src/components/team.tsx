@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import dentist_photo_1 from "../../public/team-member-1.jpeg";
+import dentist_photo_2 from "../../public/team-member-2.jpeg";
+import dentist_photo_3 from "../../public/team-member-3.jpg";
 
 export default function Team() {
   const t = useTranslations("Team");
@@ -9,9 +12,7 @@ export default function Team() {
       <hr className="mb-12 mt-12 sm:mt-0  h-[2px] border-t-0 bg-transparent bg-gradient-to-r from-transparent via-accent to-transparent opacity-35" />
       <div className=" grid mx-4 items-center gap-4 px-4 text-center md:px-6">
         <div className="space-y-2 text-primary">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            {t("team_header")}
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{t("team_header")}</h2>
           <p className="mx-auto max-w-[600px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
             {t("team_text")}
           </p>
@@ -23,11 +24,12 @@ export default function Team() {
               className="rounded-full transition duration-300 ease-in-out hover:scale-105 shadow-xl border-2 border-accent"
               height="400"
               width="400"
-              src="/team-member-1.jpeg"
+              src={dentist_photo_1}
               style={{
                 aspectRatio: "400/400",
                 objectFit: "cover",
               }}
+              placeholder="blur"
             />
             <div className="space-y-2 ">
               <h3 className="font-bold">{t("team_doctor1_name")}</h3>
@@ -41,11 +43,12 @@ export default function Team() {
               className="rounded-full transition duration-300 ease-in-out hover:scale-105 shadow-xl border-2 border-accent"
               height="400"
               width="400"
-              src="/team-member-1.jpeg"
+              src={dentist_photo_2}
               style={{
                 aspectRatio: "400/400",
                 objectFit: "cover",
               }}
+              placeholder="blur"
             />
             <div className="space-y-2">
               <h3 className="font-bold">{t("team_doctor2_name")}</h3>
@@ -58,11 +61,12 @@ export default function Team() {
               className="rounded-full transition duration-300 ease-in-out hover:scale-105 shadow-xl border-2 border-accent"
               height="400"
               width="400"
-              src="/team-member-1.jpeg"
+              src={dentist_photo_3}
               style={{
                 aspectRatio: "400/400",
                 objectFit: "cover",
               }}
+              placeholder="blur"
             />
             <div className="space-y-2">
               <h3 className="font-bold">{t("team_doctor3_name")}</h3>

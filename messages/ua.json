@@ -9,9 +9,11 @@
     "navbar_language_ua": "Українська"
   },
   "Welcome": {
-    "welcome_header": "Вітаємо в DZ Dental Studio",
-    "welcome_text": "Ваш надійний партнер для здорової та красивої посмішки.",
-    "welcome_image_alt": " Зображення стоматологічної клініки."
+    "welcome_header_black": "Вітаємо в ",
+    "welcome_header_yellow": "DZ Dental Studio",
+    "welcome_second_header": "Лікування зубів це важиливо",
+    "welcome_text": "Дізнатесь про нову, технологічну стоматологічну клініку, де ви можете швидко та якісно вилікувати всі свої зуби.",
+    "welcome_contact": "Зв'язатись з нами!"
   },
 
   "Services": {

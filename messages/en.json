@@ -9,9 +9,11 @@
     "navbar_language_ua": "Ukrainian"
   },
   "Welcome": {
-    "welcome_header": "Welcome to DZ Dental Studio",
-    "welcome_text": "Your trusted partner for a healthy and beautiful smile.",
-    "welcome_image_alt": "Image of dental clinic"
+    "welcome_header_black": "Welcome to ",
+    "welcome_header_yellow": "DZ Dental Studio",
+    "welcome_second_header": "Teeth treatment is important",
+    "welcome_text": "Explore new high tech dental clinic where your you can get all your teeth fixed quickly and corectly.",
+    "welcome_contact": "Contact Us"
   },
 
   "Services": {

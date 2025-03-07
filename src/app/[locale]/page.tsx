@@ -13,7 +13,7 @@ import Footer from "../../components/Footer";
 import Map from "../../components/Map";
 import PreFooter from "../../components/Prefooter";
 import Carousel from "../../components/Carousel";
-import About from "../../components/About";
+import GaleryGrid from "../../components/GaleryGrid";
 import MovingLine from "../../components/Moving-line";
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
             <Carousel />
           </NextIntlClientProvider>
           <Team />
-          <About />
+          <GaleryGrid />
           <NextIntlClientProvider messages={pick(messages, "Contact")}>
             <Contact />
           </NextIntlClientProvider>

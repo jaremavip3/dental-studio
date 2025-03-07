@@ -13,13 +13,16 @@ import img_clinic_10 from "../../public/grid_clinic_pics/clinic_photo_10.jpg";
 import img_clinic_11 from "../../public/grid_clinic_pics/clinic_photo_11.jpg";
 import img_clinic_12 from "../../public/grid_clinic_pics/clinic_photo_12.jpg";
 
-export default function About() {
-  const t = useTranslations("Carousel");
+export default function GaleryGrid() {
+  const t = useTranslations("Gallery");
 
   return (
-    <div className="w-full">
-      <h2 className="font-semibold text-6xl text-center text-balance sm:mb-20 ">About us</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="w-full px-4">
+      <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+        {t("gallery_header")}
+      </h2>
+      <p className="text-center     text-white text-balance mt-4">{t("gallery_text")}</p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         {/* Column #1 */}
         <div className="grid gap-4">
           <div className="relative h-60 w-full">
@@ -28,7 +31,7 @@ export default function About() {
               src={img_clinic_1}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 1"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -38,7 +41,7 @@ export default function About() {
               src={img_clinic_2}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 2"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -48,7 +51,7 @@ export default function About() {
               src={img_clinic_3}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 3"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -62,7 +65,7 @@ export default function About() {
               src={img_clinic_4}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 4"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -72,7 +75,7 @@ export default function About() {
               src={img_clinic_5}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 5"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -82,7 +85,7 @@ export default function About() {
               src={img_clinic_6}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 6"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -96,7 +99,7 @@ export default function About() {
               src={img_clinic_7}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 7"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -106,7 +109,7 @@ export default function About() {
               src={img_clinic_8}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 8"
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>
@@ -116,7 +119,41 @@ export default function About() {
               src={img_clinic_9}
               fill
               style={{ objectFit: "cover" }}
-              alt="Clinic Photo 9"
+              alt={t("gallery_img_alt")}
+              placeholder="blur"
+            />
+          </div>
+        </div>
+
+        {/* Column #4 */}
+        <div className="grid gap-4">
+          <div className="relative h-40 w-full">
+            <Image
+              className="rounded-xl shadow"
+              src={img_clinic_10}
+              fill
+              style={{ objectFit: "cover" }}
+              alt={t("gallery_img_alt")}
+              placeholder="blur"
+            />
+          </div>
+          <div className="relative h-60 w-full">
+            <Image
+              className="rounded-xl shadow"
+              src={img_clinic_11}
+              fill
+              style={{ objectFit: "cover" }}
+              alt={t("gallery_img_alt")}
+              placeholder="blur"
+            />
+          </div>
+          <div className="relative h-60 w-full">
+            <Image
+              className="rounded-xl shadow"
+              src={img_clinic_12}
+              fill
+              style={{ objectFit: "cover" }}
+              alt={t("gallery_img_alt")}
               placeholder="blur"
             />
           </div>

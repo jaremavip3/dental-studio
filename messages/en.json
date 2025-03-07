@@ -60,6 +60,11 @@
     "team_doctor2_bio": "Jane Smith is a registered dental hygienist with a passion for helping patients maintain optimal oral health.",
     "team_doctor3_bio": "Sarah Johnson is a certified dental assistant with a friendly and caring demeanor."
   },
+  "Gallery": {
+    "gallery_header": "Our Clinic",
+    "gallery_text": "Take a look at our state-of-the-art dental clinic and see where we provide top-quality care for our patients.",
+    "gallery_img_alt": "Image of dental clinic"
+  },
   "Contact": {
     "contact_header": "Contact us",
     "contact_text": "We look forward to hearing from you. Please contact us with any questions or to schedule an appointment.",

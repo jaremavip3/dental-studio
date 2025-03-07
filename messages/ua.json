@@ -73,6 +73,11 @@
     "contact_form_placeholder_message": "Введіть своє повідомлення",
     "contact_form_submit": "Надіслати"
   },
+  "Gallery": {
+    "gallery_header": "Наша клініка",
+    "gallery_text": "Подивіться на нашу стоматологічну клінікунового покоління та побачте, де ми надаємо високоякісну допомогу нашим пацієнтам.",
+    "gallery_img_alt": "Фотографія стоматологічної клініки"
+  },
   "Map": {
     "map_language_ua": "uk",
     "map_region_ua": "uk",
